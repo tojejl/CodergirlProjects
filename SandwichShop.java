@@ -64,18 +64,17 @@ public class SandwichShop {
             out.println("Fell short");
         }
         int allDailytotals = (dailySoupGoal + dailySubGoal + dailyBurgerGoal + dailyVeggieGoal);
+        int dailySalesGoals = (goalForVeggies + goalForBurgers + goalForSubs + goalForSoup);
+
 //This will sort out if the restaurant will/will not make all daily sales goal encompassing all items
         out.print("\n");
-        if (allDailytotals >= 550)
-        {
+        if (allDailytotals >= dailySalesGoals){
             out.println("Made goal for everything!");
         }
-        else if (allDailytotals <= 550)
-        {
+        else if (allDailytotals <= dailySalesGoals) {
             out.println("\n");
         }
-        else
-        {
+        else{
             out.println("\n");
         }
 
