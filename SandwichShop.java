@@ -20,9 +20,9 @@ public class SandwichShop {
         out.println("How many veggie sandwiches were sold today?");
         int dailyVeggieGoal = keyboard.nextInt();
 
-        if (dailyVeggieGoal == 50) {
+        if (dailyVeggieGoal == goalForVeggies) {
             out.println("Made goal for Veggie Sandwiches.");
-        } else if (dailyVeggieGoal > 50) {
+        } else if (dailyVeggieGoal > goalForVeggies) {
             out.println("Made goal for Veggie Sandwiches.");
         } else {
             out.println("Fell Short");
@@ -32,10 +32,10 @@ public class SandwichShop {
         out.println("How many burgers were sold today?");
         int dailyBurgerGoal = keyboard.nextInt();
 
-        if (dailyBurgerGoal == 250) {
+        if (dailyBurgerGoal == goalForBurgers) {
             out.println("Made goal for Burgers.");
-        } else if (dailyBurgerGoal > 250) {
-            out.println("Made for Burgers");
+        } else if (dailyBurgerGoal > goalForBurgers) {
+            out.println("Made goal for  Burgers");
         } else {
             out.println("Fell Short");
         }
@@ -44,9 +44,9 @@ public class SandwichShop {
         out.println("How many subs were sold today?");
         int dailySubGoal = keyboard.nextInt();
 
-        if (dailySubGoal == 180) {
+        if (dailySubGoal == goalForSubs ) {
             out.println("Made goal for Sub Sandwiches.");
-        } else if (dailySubGoal > 180) {
+        } else if (dailySubGoal > goalForSubs) {
             out.println("Made goal for Sub Sandwiches");
         } else {
             out.println("Fell short");
@@ -56,22 +56,22 @@ public class SandwichShop {
         out.println("How many soups were sold today?");
         int dailySoupGoal = keyboard.nextInt();
 
-        if (dailySoupGoal == 70) {
+        if (dailySoupGoal == goalForSoup) {
             out.println("Made goal for soup.");
-        } else if (dailySoupGoal > 70) {
+        } else if (dailySoupGoal > goalForSoup) {
             out.println("Made goal for soup.");
         } else{
             out.println("Fell short");
         }
         int allDailytotals = (dailySoupGoal + dailySubGoal + dailyBurgerGoal + dailyVeggieGoal);
-        int dailySalesGoals = (goalForVeggies + goalForBurgers + goalForSubs + goalForSoup);
+        int targetSalesGoals = (goalForVeggies + goalForBurgers + goalForSubs + goalForSoup);
 
 //This will sort out if the restaurant will/will not make all daily sales goal encompassing all items
         out.print("\n");
-        if (allDailytotals >= dailySalesGoals){
+        if (allDailytotals >= targetSalesGoals){
             out.println("Made goal for everything!");
         }
-        else if (allDailytotals <= dailySalesGoals) {
+        else if (allDailytotals <= targetSalesGoals) {
             out.println("\n");
         }
         else{
