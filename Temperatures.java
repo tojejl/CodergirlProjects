@@ -144,25 +144,18 @@ public class Temperatures {
 
 //Calculates the overall average temperature of the given data.
         int sumAverage = 0;
+        int count = 0;
         for (int dayOfWeek = 0; dayOfWeek < temps.length; dayOfWeek++) {
-            for (int timeOfDay = 0; timeOfDay < temps.length; timeOfDay++) {
+            for (int timeOfDay = 0; timeOfDay < temps[0].length; timeOfDay++) {
+                count ++;
                 sumAverage += temps[dayOfWeek][timeOfDay];
             }
         }
-        int sizeAverage = temps.length * temps.length;
-        int overallAverage =   sumAverage / sizeAverage;
+        //int sizeAverage = temps.length * temps.length;
+        int overallAverage =   sumAverage / count;
 
 
         System.out.println("\nThe final average temperature for the week was: \n\nOverall: "+overallAverage);
-
-
-
-
-
-
-
-
-
-
+        
     }
 }
