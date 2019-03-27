@@ -151,11 +151,10 @@ public class Temperatures {
                 sumAverage += temps[dayOfWeek][timeOfDay];
             }
         }
-        //int sizeAverage = temps.length * temps.length;
         int overallAverage =   sumAverage / count;
 
 
         System.out.println("\nThe final average temperature for the week was: \n\nOverall: "+overallAverage);
-        
+
     }
 }
